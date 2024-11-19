@@ -1,0 +1,31 @@
+digraph ArbolDecision {
+  Nodo0 [label="numProblemasBanco"];
+  root -> Nodo0;
+  Nodo0 -> Nodo1 [label=">=2"];
+  Nodo1 [label="{}"];
+  Nodo0 -> Nodo1;
+  Nodo0 -> Nodo2 [label="<2"];
+  Nodo2 [label="puntosCredito"];
+  Nodo0 -> Nodo2;
+  Nodo2 -> Nodo3 [label="<700"];
+  Nodo3 [label="aniosEnTrabajo"];
+  Nodo2 -> Nodo3;
+  Nodo3 -> Nodo4 [label=">=2"];
+  Nodo4 [label="{}"];
+  Nodo3 -> Nodo4;
+  Nodo3 -> Nodo5 [label="<2"];
+  Nodo5 [label="propiedadVivienda"];
+  Nodo3 -> Nodo5;
+  Nodo5 -> Nodo6 [label="HIPOTECADA"];
+  Nodo6 [label="{}"];
+  Nodo5 -> Nodo6;
+  Nodo5 -> Nodo7 [label="PROPIA"];
+  Nodo7 [label="{}"];
+  Nodo5 -> Nodo7;
+  Nodo5 -> Nodo8 [label="RENTADA"];
+  Nodo8 [label="{}"];
+  Nodo5 -> Nodo8;
+  Nodo2 -> Nodo9 [label=">=700"];
+  Nodo9 [label="{}"];
+  Nodo2 -> Nodo9;
+}
